@@ -1,0 +1,191 @@
+/* style reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+a {
+  text-decoration: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  
+  -webkit-font-smoothing: antialiased; /*  сделает фон более округлым при масштабировании */
+  -webkit-overflow-scrolling: touch; /* позволит скролить тачскрином */
+  
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Pragmatica C";
+  font-weight: 300;
+  color: #333;
+}
+p {
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+.centered {
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+}
+button {
+  border: none;
+  color: inherit;
+}
+* {
+  outline: 0 !important;
+}
+/*/ Remove border and padding in Firefox */
+::-moz-focus-outer, ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+button::-moz-focus-inner 
+{
+  border: 0;
+}
+dl, ol, ul {
+  margin-bottom: 0 !important;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* style reset */
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  
+  /*height: 100%;*/ /* выдавливает хедер в самый верх страницы */
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,.75);
+}
+.content {
+  width: 100%;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.footer {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background-color: #fff;
+}

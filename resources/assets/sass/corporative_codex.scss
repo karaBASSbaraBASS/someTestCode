@@ -1,0 +1,58 @@
+/* corporative_codex */
+.mainCodexCaption {
+	p {
+		color: #000000;
+		font-family: "Arial";
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.positionCaption {
+		text-align: right;
+		display: block;
+		font-family: "Arial-Italic MT";
+		font-size: 16px;
+	}
+	.positionCaptionName {
+		text-align: right;
+		display: block;
+		font-family: "Arial-BoldItalic MT";
+		font-weight: 700;
+		line-height: 24px;
+		font-size: 16px;
+	}
+}
+.codexItems {
+	margin-top: 65px;
+}
+.codexItem {
+	width: 85%;
+}
+.codexItem + .codexItem {
+	margin-top: 25px;
+}
+.codexItem__header {
+	color: $colorRed;
+	font-family: "Pragmatica C";
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 24px;
+	text-decoration: underline;
+	margin-bottom: 15px;
+}
+.codexItem__caption {
+	color: $colorDarkGrey;
+	font-family: "Arial";
+	font-size: 14px !important;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+@media (max-width: 992px) { 
+	.codexItem {
+		width: 100%;
+	}
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+	
+}
+/* corporative_codex end */

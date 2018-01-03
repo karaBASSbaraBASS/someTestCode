@@ -1,0 +1,186 @@
+/* employees */
+.contentPageMainWrap,
+.empSearchWrap {
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.18);
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	padding: 24px 20px; 
+	margin-top: 12px;
+	
+}
+.pageSearchForm {
+  width: 100%;
+  font-size: 16px;
+}
+.contentMainHeader,
+.empSearchHeader {
+	color: $colorDarkGrey;
+	font-family: "Pragmatica C";
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+.form-inline {
+  flex-wrap: nowrap;
+  width: 100%;
+  
+}
+.pageSearchForm {
+  height: 50px;
+}
+
+.form-inline,
+.searchColumns {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+}
+#department {
+	height: 100%;
+}
+/* custom select */
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $colorDarkGrey;
+  width: $select-width;
+  height: $select-height;
+  border: 1px solid #c9c9c9;
+	font-family: "Arial";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 14px 15px;
+  transition: all 0.2s ease-in;
+  &:after {
+    content:url(/img/icons/down-arrowGray.svg);
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    transition: transform 0.2s ease-in;
+  }
+  &:hover {
+    background-color: #ececec;
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      content:url(/img/icons/down-arrowGray.svg);
+      top: 16px;
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $select-background;
+  border: 1px solid #c9c9c9;
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    transition: all 0.15s ease-in;
+    &:hover {
+      color: $colorDarkGrey;
+      background: $select-color;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+/* custom select end */
+.searchResultItem {
+	display: flex;
+	padding: 30px 0px;
+}
+.searchResultItem + .searchResultItem {
+	border-top: 1px solid #ececec;
+}
+.userProfileAvatar {
+	width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #d7d7d7;
+}
+.userProfileDescription {
+	margin-left: 30px;
+	&__header {
+		color: $colorDarkGrey;
+		font-family: "Pragmatica C";
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.position {
+		color: $colorDarkGrey;
+		font-family: "Arial";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+		margin-bottom: 17px;
+		display: block;
+	}
+	.positionInfo {
+		.positionInfo__items {
+			color: $colorDarkGrey;
+			font-family: "Arial";
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 24px;
+			span {
+				color: #626262;
+			}
+		}
+	}
+}
+
+
+.arrowRotate {
+
+}
+.selectList {
+	display: none;
+}
+@media (max-width: 992px) { 
+  .form-inline {
+    flex-wrap: wrap;
+  }
+  .selectForm {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .searchColumns {
+    height: 100%;
+  }
+}
+
+/* employees end */

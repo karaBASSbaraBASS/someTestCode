@@ -1,0 +1,72 @@
+/* sidebar */
+.asideSubMenu__item,
+.asideMenu__header {
+	color: $colorDarkGrey;
+	font-family: "Pragmatica C";
+	font-size: 16px;
+	font-weight: 400;
+	display: block;
+	padding:20px 20px; 
+	position: relative;
+	cursor: pointer;
+	transition: background-color 0.3s ease-out, color 0.3s ease-out !important;
+	width: 100%;
+	margin: 0px auto;
+	&:hover {
+		background-color: #eaeaeade;
+		color: #434242;
+	}
+}
+.asideSubMenu__item {
+	padding: 0px;
+	&:hover {
+		background-color: darken(#e2e2e2, 3)
+	}
+	&:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 90%;
+		height: 1px;
+		background-color: #e2e2e2;
+	}
+}
+.asideMenu__header {
+	position: relative;
+}
+.asideMenu__header:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 90%;
+		height: 1px;
+		margin: 0px 5% ; 
+		background-color: #e2e2e2;
+}
+.asideSubMenu__item {
+	a {
+		padding: 20px 25px;
+	}
+}
+.asideMenu__item {
+	position: relative;
+	word-wrap: break-word; /* Перенос слов */
+}
+.asideMenu__item>.arrow {
+	background-size: 18px 18px;
+	transition: transform 0.2s ease-in;
+	background-image: url(/img/icons/caret-upRed.svg);
+	background-repeat: no-repeat;
+	background-position: 50px center;
+	transition: transform 0.2s ease-in;
+}
+.asideMenu__item>.arrow.arrowRotate {
+	background-size: 18px 18px;
+	transition: transform 0.2s ease-in;
+	background-image: url(/img/icons/caret-downRed.svg);
+	background-repeat: no-repeat;
+	background-position: 50px center;
+	transition: transform 0.2s ease-in;
+}
+/* sidebar end */

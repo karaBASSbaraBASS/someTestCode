@@ -1,0 +1,100 @@
+/* mainNews */
+.tabset__wrap {
+	display: flex;
+}
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+.firstTab {
+	margin: 0px 20px 10px 56px !important;
+}
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.tabset > label {
+	position: relative;
+	color: #bebebe;
+	font-family: "Pragmatica C";
+	font-size: $newsHeader;
+	font-weight: 400;
+	line-height: 22px;
+	color: #5e5e5e;
+	cursor: pointer;
+	margin: 0px 20px 10px;
+    display: inline-block;
+}
+
+/*.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}*/
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+	color: $colorRed;
+	text-decoration: underline;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+	
+}
+
+.newsTab > input:checked + label {
+  	color: $colorRed !important;
+	text-decoration: underline !important;
+}
+
+.mainPageNews__title {
+	color: $colorDarkGrey;
+	font-family: "Pragmatica C";
+	font-size: $newsHeader;
+	font-weight: 700;
+	letter-spacing: 0.7px;
+}
+.mainPageNews:first-child {
+	border-top: none;
+}
+.mainPageNews:last-child {
+	border-bottom: none;
+}
+.mainPageNews {
+	color: $colorDarkGrey;
+	font-family: "Arial MT";
+	font-size: $usualText;
+	font-weight: 400;
+	line-height: 22px;
+	padding: 20px 25px;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+}
+.mainPageNews__date {
+	color: #aeaeae;
+	font-family: "Arial MT";
+	font-size: $usualText;
+	font-weight: 400;
+	display: block;
+	line-height: 13px;
+}
+.mainPageNews p {
+	margin: 12px 0px;
+}
+
+/* mainNews end */

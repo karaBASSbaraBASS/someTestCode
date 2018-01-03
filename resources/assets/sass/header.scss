@@ -1,0 +1,416 @@
+/* header */
+
+.headerWrap {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	/*height: 80px;*/
+	box-shadow: 0 0px 13px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	font-weight: 400;
+	/* Text style for "About" */
+	width: 100%;
+	/*padding: 0 20px;*/
+
+	z-index: 999 !important;
+	position: relative;
+}
+
+.menu .menu__item>.dropDownBtn,
+.menu .menu__item>a{
+	padding: 32px 0; 
+	display: block;
+    width: 100%;
+}
+.dropDown:hover.headerSearch:after,
+.menu__item:hover:after,
+.menu__item.active:after {
+	content: "";
+	position: absolute;
+	top: 55px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.menu__item a:visited,
+.menu__item a:focus,
+.menu__item a:active,
+.menu__item:hover {
+	color: #ffffff !important;
+	text-decoration: none;
+}
+.menu .menu__item a,
+.menu .menu__item .dropDownBtn,
+.menu .menu__item {
+	position: relative;
+}
+
+.dropDown:after {
+	display: none;
+}
+
+.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 190px;
+  height: 37px;
+  background: url('/img/header/logo.png') no-repeat 0px 0px;
+}
+
+.navbar {
+	width: 60%;
+	background-color: $colorRed;
+	padding: 0px 33px;
+} 
+
+.navbar-toggler {
+	cursor: pointer;
+}
+.navbar-toggler {
+	display: none;
+}
+/* рисуем иконку гамбургера из трех горизонтальных линий */
+.hamburger {
+  /*position: relative;*/
+  display: block;
+  width: 28px;
+  height: 30px;
+}
+.navbar-toggler {
+	margin: auto 0;
+}
+.hamburger1,
+.hamburger2,
+.hamburger3 {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 28px;
+  background: #fff;
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+}
+.hamburger1 {
+  top: calc(50% - 10px);
+}
+  
+.hamburger3 {
+  top: calc(50% + 10px);
+}
+/* Добавим анимацию, первую и третью полосу ставим под 45град. среднюю заливаем цветом фона. */
+.convert .hamburger1 {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.convert .hamburger2 {
+  background-color: transparent;
+}
+.convert .hamburger3 {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.headerCTA__wrap {
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header {
+	background-color: #ffffff;
+}
+.mobileMenu {
+	display: none;
+	height: 0px;
+}
+.menu__item {
+	cursor: pointer;
+}
+.menu__item a{
+	color: #ffffff;
+	font-family: "Pragmatica C";
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 19px;
+}
+.menu__item:hover>a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.dropDownBtn.active {
+	color: #b558c3;
+}
+.dropDownWrap {
+    z-index: 10;
+    /*opacity: 0;*/
+    -webkit-transition: 0.25s linear opacity;
+    cursor: pointer;
+    position: absolute;
+
+    background: #FAFAFA;
+    /*top: 80px;*/
+    border: 1px solid #ececec;
+	background-color: #ffffff;
+	/*transition: opacity 0.5s;*/
+}
+.menu__item:hover>.dropDownWrap,
+.menu__item>.dropDownWrap.active,
+.menu__item:hover>.dropDownWrap.active{
+	left: 0px;
+    opacity: 1;
+}
+.dropDown+.dropDown {
+	border-top: 1px solid #eeeeee;
+}
+.dropDown a{
+	font-family: "PT Sans";
+	font-size: 18px;
+	font-weight: 400;
+
+	display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+    -webkit-transition: 0.3s linear color; 
+    -webkit-transition: 0.3s linear background-color;
+
+}
+.dropDown a:hover {
+	color: #fff;
+}
+/* .logoWrap .logo{
+// 	margin-top: 23px;
+ }*/
+.logoWrap {
+	width: 19%;
+	z-index: 10;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+.headerLogin {
+	width: 19%;
+}
+.navbar {
+	order: 2;
+}
+.headerLogin {
+	order: 3;
+}
+.headerLogin a {
+	margin-right: 8px; 
+}
+
+
+.navbar-toggler {
+	width: 40px !important;
+    height: 30px !important;
+    padding: 15px 5px !important;
+    position: relative !important;
+}
+.hamburger {
+	position: absolute;
+    display: block;
+    width: 28px;
+    height: 30px;
+    top: 0;
+    left: 5px;
+}
+.menu__item .headerSearch {
+	/*margin: 0 10px;*/
+	position: relative;
+}
+.searchIcon {
+	width: 21px;
+	height: 21px;
+	background:url(../img/header/search-icon.svg);
+}
+.rightGap {
+	margin-right: 18px;
+}
+/*.headerSearch:after {
+	content: "\f002"; 
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: 300;
+	text-decoration: inherit;
+	position: absolute;
+	font-size: 25px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 32px 0;
+}*/
+.headerLogin {
+	padding:10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__settings i {
+		font: normal normal normal 27px/1 FontAwesome !important;
+		transition: all 0.5s;
+		color: $colorlightGray;
+	}
+	&__settings:hover i {
+		color: $colorRed;
+		transform: rotate(90deg);
+	}
+
+	&__greeting {
+		color: $colorDarkGrey;
+		font-family: "Pragmatica C";
+		font-size: $usualText;
+		font-weight: 400;
+		line-height: 17px;
+		padding: 8px 8px;
+		/*width: 47%; */
+	}
+	&__userProfile {
+		border-radius: 50%;
+    	background-color: #d7d7d7;
+    	border: 2px solid $colorlightGray;
+    	transition: border 0.3s;
+	}
+	&__userProfile:hover {
+		border-radius: 50%;
+    	border: 2px solid $colorRed;
+	}
+}
+.headerLogin__greeting {
+	width: 47%;
+}
+.headerLogin__userProfile {
+	width: 60px;
+	height: 60px;
+}
+.headerWrap {
+	flex-wrap: wrap;
+	z-index: 4;
+}
+.mobileMenu {
+	.dropDownWrap {
+		.dropDown {
+			a {
+				color: #434242;
+    			font-family: "Pragmatica C";
+    			font-weight: 700;
+    			transition: all 0.3s;
+			}
+			
+		}
+		.dropDown.active {
+			a {
+				background-color: #e6e6e6;
+			}
+		}
+		.dropDown:hover {
+			a {
+    			color: #fff;
+    			background-color: #4f4f4f;
+    		}
+    	}
+	}
+}
+/* media */
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1100px) {
+	.navbar {
+		padding: 0px;
+	}
+	.menu {
+		justify-content: space-around;
+	}
+	.rightGap {
+		margin-right: 0px;
+	}
+	.headerLogin {
+		padding: 0px 0px;
+		justify-content: space-around;
+		width: 17%;
+	}
+	.headerLogin__greeting {
+		display: none;
+	}
+}
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+	.menu__item a {
+		font-size:16px;
+	}
+	.logo {
+		background-size: 150px auto;
+		height: 30px;
+		width: 150px;
+	}
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+	.navbar-toggler {
+		display: block;
+		margin: auto auto;
+	}
+	.menu {
+		display: none;
+	}
+	.menu__item {
+		background-color: #e73d36;
+	}
+	.navbar {
+		order: 2;
+		width: 33%;
+	}
+	.headerLogin {
+		order: 3;
+		width: 33%;
+	}
+	.headerWrap, .menu {
+		flex-wrap: wrap;
+	}
+	.navbar-collapse {
+		-webkit-box-shadow: 0 9px 20px -2px rgba(0,0,0,.75);
+		-moz-box-shadow: 0 9px 20px -2px rgba(0,0,0,.75);
+		box-shadow: 0 5px 10px -2px rgba(0,0,0,.75);
+		z-index: 1000;
+		transition: height 0.5s;
+	}
+	.logoWrap {
+		width: 33%;
+	}
+	.collapsing.mobileMenu {
+		display: block;
+	}
+	.dropDownWrap {
+		position: absolute;
+    	overflow: hidden;
+    	box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+		width: 100%;
+		opacity: 1;
+	}
+	.mobileMenu {
+		position: absolute;
+		top: 64px;
+		left: 0px;
+	    flex-direction: column;
+	    width: 100%;
+	    order: 4;
+	}
+	.collapse.show>.dropDownWrap {
+		opacity: 1;
+	}
+
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+
+}
+/* media */
+
+/* header end */

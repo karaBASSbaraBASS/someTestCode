@@ -1,0 +1,73 @@
+/* company_head */
+.ceoAvatar {
+	width: 157px;
+	height: 199px;
+	margin: 15px;
+}
+.infoBlock {
+	display: flex;
+}
+.ceoSpaces {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.ceoSpaces + .ceoSpaces {
+	margin-top: 50px;
+}
+.personInfo__header {
+	font-family: "Pragmatica C";
+	font-size: 24px;
+	font-weight: 700;
+}
+.personInfo__qualification {
+	display: block;
+	color: $colorDarkGrey;
+	font-family: "Arial";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-bottom: 25px;
+}
+.personInfo__item {
+	color: $colorDarkGrey;
+	font-family: "Arial";
+	font-size: 16px;
+	font-weight: 400;
+	b {
+		font-weight: 700;
+	}
+}
+.personInfo__item + .personInfo__item {
+	margin-top: 20px;
+}
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+	
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+	.ceoSpaces {
+		display: flex;
+		flex-direction: column;
+	}
+	.directionRight {
+		.infoBlock__img {
+			order: 1;
+		}
+		.infoBlock__caption {
+			order: 2;
+		}
+	}
+	.directionLeft {
+		.infoBlock__img {
+			order: 1;
+		}
+		.infoBlock__caption {
+			order: 2;
+		}
+	}
+}
+
+
+/* company_head end */

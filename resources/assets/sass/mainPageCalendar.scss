@@ -1,0 +1,103 @@
+/* mainPageCalendar */
+.roomTab {
+	/*display: flex;
+	justify-content: end;*/
+}
+.roomTab__Caption {
+	color: $colorRed;
+	font-family: "Pragmatica C";
+	font-size: $usualText;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.newsTab > input:checked + label {
+  	color: #626161;
+	text-decoration: none;
+}
+.roomTab__Caption {
+	color: $colorRed;
+	text-decoration: underline;
+}
+
+.table {
+	
+	.tr {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	.tableHeader {
+		
+	}
+	.td {
+		width: 20%;
+		text-align: center;
+		color: #000000;
+		font-family: "Pragmatica C";
+		font-size: $usualText;
+		font-weight: 400;
+		line-height: 22px;
+		box-sizing: border-box;
+
+		b {
+			color: #000000;
+			font-family: "Pragmatica C";
+			font-size: $usualText;
+			font-weight: 700;
+			line-height: 22px;
+		}
+	}
+	.graftTable {
+		.td {
+			border: 1px solid #f2f2f2;
+			position: relative;
+		}
+		.td:hover {
+			cursor: pointer;
+			.dot {
+				background-image: url(../img/icons/ellipseDarkRed.svg);
+			}
+		}
+	}
+}
+.graftTable>.td {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dot {
+	background-image: url(../img/icons/ellipseGray.svg);
+	background-size: 10px auto;
+    background-repeat: no-repeat;
+	width: 10px;
+	height: 10px;
+}
+.hintTab {
+	margin-top: 6px;
+	width: 180px;
+	height: 165px;
+	background-image: linear-gradient(to top, #414141 0%, #963e39 100%);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	border-radius: 5px;
+	z-index: 10;
+	&:before {
+		content: "";
+	    display: block;
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    border-color: transparent;
+	    border-width: 6px;
+	    border-style: solid;
+
+	    bottom: 100%;
+	    left: 50%;
+	    margin-left: -6px;
+	    border-bottom-color: #923f3c;
+	}
+}
+
+/* mainPageCalendar end */

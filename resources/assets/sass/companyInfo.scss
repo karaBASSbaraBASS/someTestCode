@@ -1,0 +1,84 @@
+/* companyInfo */
+.infoPageMainWrap {
+	margin-bottom: 60px;	
+}
+.contentPageMainWrap p {  
+	color: $colorDarkGrey;
+	font-family: "Arial";
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.infoBlock__header {
+	font-family: "Pragmatica C";
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+.infoBlock {
+	display: flex;
+	flex-direction: row;
+}
+.infoBlock__img {
+	width: 280px;
+	height: 280px;
+	margin: 15px;
+}
+.infoBlock__caption {
+	margin: 15px;
+}
+.directionRight {
+	.infoBlock__img {
+		order: 1;
+	}
+	.infoBlock__caption {
+		order: 2;
+	}
+}
+.directionLeft {
+	.infoBlock__img {
+		order: 2;
+	}
+	.infoBlock__caption {
+		order: 1;
+	}
+}
+.infosAdaptiveWrap {
+	margin: 0 -15px
+}
+.infoBlock {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+	
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+	.infoBlock__img {
+		margin: 0 auto;
+	}
+	.infoBlock {
+		display: flex;
+		flex-direction: column;
+	}
+	.directionRight {
+		.infoBlock__img {
+			order: 1;
+		}
+		.infoBlock__caption {
+			order: 2;
+		}
+	}
+	.directionLeft {
+		.infoBlock__img {
+			order: 1;
+		}
+		.infoBlock__caption {
+			order: 2;
+		}
+	}
+}
+/* companyInfo end */
